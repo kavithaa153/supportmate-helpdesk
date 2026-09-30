@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f5f9;
+  color: #111827;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#root {
+  animation: pageFadeIn 0.35s ease-out;
+}
+:root {
+  --app-bg: #f6f8fb;
+  --card-bg: #ffffff;
+  --text-primary: #172033;
+  --text-secondary: #667085;
+  --border-color: #e1e6ee;
+  --input-bg: #ffffff;
+}
+
+html[data-theme="dark"] {
+  --app-bg: #0f172a;
+  --card-bg: #172033;
+  --text-primary: #f8fafc;
+  --text-secondary: #aab4c5;
+  --border-color: #334155;
+  --input-bg: #111827;
+}
+
+html[data-theme="light"] {
+  --app-bg: #f6f8fb;
+  --card-bg: #ffffff;
+  --text-primary: #172033;
+  --text-secondary: #667085;
+  --border-color: #e1e6ee;
+  --input-bg: #ffffff;
+}
+
+body {
+  background: var(--app-bg);
+  color: var(--text-primary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}

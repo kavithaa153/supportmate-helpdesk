@@ -1,0 +1,371 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 248px;
+  z-index: 90;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 30px;
+  background: #ffffff;
+  border-bottom: 1px solid #e3e7eb;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-left {
+  flex: 1;
+  gap: 18px;
+}
+
+.header-right {
+  gap: 20px;
+}
+
+.header-menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  color: #536170;
+  background: #ffffff;
+  border: 1px solid #e1e5e9;
+  border-radius: 7px;
+}
+
+.header-search {
+  width: min(520px, 100%);
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 13px;
+  color: #8d98a4;
+  background: #f7f8fa;
+  border: 1px solid #e2e6ea;
+  border-radius: 7px;
+}
+
+.header-search:focus-within {
+  background: #ffffff;
+  border-color: #9bb0c4;
+}
+
+.header-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #263845;
+  background: transparent;
+  font-size: 13px;
+}
+
+.header-search input::placeholder {
+  color: #9ca6b0;
+}
+
+.header-icon-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  color: #536170;
+  background: transparent;
+  border: none;
+}
+
+.notification-count {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  min-width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #b54747;
+  border-radius: 50%;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #65717d;
+}
+
+.user-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  color: #ffffff;
+  background: #315a86;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 90px;
+}
+
+.user-info strong {
+  color: #263845;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.user-info span {
+  color: #8d98a4;
+  font-size: 10px;
+}
+
+@media (max-width: 900px) {
+  .header {
+    left: 220px;
+  }
+
+  .user-info {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    position: sticky;
+    left: 0;
+    height: 64px;
+    padding: 0 18px;
+  }
+
+  .header-search {
+    display: none;
+  }
+}
+.header-profile-wrapper,
+.header-notification-wrapper {
+  position: relative;
+}
+
+.header-profile-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.header-profile-button:hover {
+  background: #f4f7fb;
+}
+
+.header-avatar {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #315f97;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.header-profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 100px;
+}
+
+.header-profile-info strong {
+  color: #1d2d45;
+  font-size: 12px;
+}
+
+.header-profile-info span {
+  margin-top: 2px;
+  color: #7d8da2;
+  font-size: 9px;
+}
+
+.header-chevron-open {
+  transform: rotate(180deg);
+}
+
+.header-profile-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 1000;
+  width: 190px;
+  padding: 7px;
+  border: 1px solid #dfe7ef;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(26, 43, 66, 0.14);
+  animation: headerMenuIn 0.2s ease both;
+}
+
+.header-profile-menu button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  height: 38px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #3b4d65;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.header-profile-menu button:hover {
+  background: #f2f6fb;
+  color: #315f97;
+}
+
+.header-menu-divider {
+  height: 1px;
+  margin: 6px 4px;
+  background: #e9eef4;
+}
+
+.header-profile-menu .header-logout-button {
+  color: #c44b4b;
+}
+
+.header-profile-menu .header-logout-button:hover {
+  background: #fff2f2;
+  color: #b83232;
+}
+
+.header-notification-button {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #56677d;
+  cursor: pointer;
+}
+
+.header-notification-button:hover {
+  background: #f4f7fb;
+}
+
+.header-notification-count {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  display: grid;
+  place-items: center;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #c74747;
+  color: #ffffff;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.header-notification-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 1000;
+  width: 320px;
+  overflow: hidden;
+  border: 1px solid #dfe7ef;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(26, 43, 66, 0.14);
+  animation: headerMenuIn 0.2s ease both;
+}
+
+.header-notification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #e9eef4;
+}
+
+.header-notification-header strong {
+  color: #1f3048;
+  font-size: 13px;
+}
+
+.header-notification-header span {
+  color: #5c7daa;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.header-notification-panel > button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 13px 15px;
+  border: 0;
+  border-bottom: 1px solid #eef2f6;
+  background: #ffffff;
+  text-align: left;
+  cursor: pointer;
+}
+
+.header-notification-panel > button:hover {
+  background: #f8fbfe;
+}
+
+.header-notification-panel > button strong {
+  color: #2d4059;
+  font-size: 11px;
+}
+
+.header-notification-panel > button span {
+  margin-top: 4px;
+  color: #8795a8;
+  font-size: 9px;
+}
+
+@keyframes headerMenuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

@@ -1,0 +1,155 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 248px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  background: #172333;
+  border-right: 1px solid #263547;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  height: 48px;
+  padding: 0 10px;
+  margin-bottom: 28px;
+}
+
+.brand-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  color: #ffffff;
+  background: #315a86;
+  border-radius: 8px;
+}
+
+.sidebar-brand-name {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.sidebar-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sidebar-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 0 12px;
+  color: #aeb9c5;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+.sidebar-menu-item {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sidebar-menu-item:hover {
+  transform: translateX(2px);
+}
+.sidebar-menu-item:hover {
+  color: #ffffff;
+  background: #202f40;
+}
+
+.sidebar-menu-item.active {
+  color: #ffffff;
+  background: #315a86;
+  border-color: #3b6998;
+}
+
+.sidebar-help-card {
+  margin-top: auto;
+  padding: 16px;
+  background: #202f40;
+  border: 1px solid #2d4054;
+  border-radius: 10px;
+}
+
+.help-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  margin-bottom: 12px;
+  color: #cbd8e5;
+  background: #2a3d51;
+  border-radius: 7px;
+}
+
+.help-card-content h3 {
+  margin: 0 0 6px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.help-card-content p {
+  margin: 0;
+  color: #9eabb8;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.help-card-content button {
+  width: 100%;
+  height: 34px;
+  margin-top: 13px;
+  color: #ffffff;
+  background: #315a86;
+  border: 1px solid #426f99;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.help-card-content button:hover {
+  background: #3a6793;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 220px;
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+  }
+
+  .sidebar-navigation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sidebar-help-card {
+    display: none;
+  }
+}

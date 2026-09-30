@@ -1,0 +1,141 @@
+#root {
+  min-height: 100vh;
+}
+button,
+a {
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+html[data-theme="dark"] .main-layout,
+html[data-theme="dark"] .main-content {
+  background: var(--app-bg);
+}
+
+html[data-theme="dark"] .dashboard-stat-card,
+html[data-theme="dark"] .dashboard-card,
+html[data-theme="dark"] .tickets-table-card,
+html[data-theme="dark"] .ticket-details-card,
+html[data-theme="dark"] .reports-stat-card,
+html[data-theme="dark"] .reports-card,
+html[data-theme="dark"] .agents-table-card,
+html[data-theme="dark"] .settings-card {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] strong {
+  color: var(--text-primary);
+}
+
+html[data-theme="dark"] p,
+html[data-theme="dark"] span,
+html[data-theme="dark"] label {
+  color: var(--text-secondary);
+}
+
+html[data-theme="dark"] input,
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea {
+  background: #111827;
+  color: #f8fafc;
+  border-color: #334155;
+}
+:root {
+  --app-bg: #f6f8fb;
+  --card-bg: #ffffff;
+  --text-primary: #172033;
+  --text-secondary: #667085;
+  --border-color: #e1e6ee;
+}
+
+html[data-theme="dark"] {
+  --app-bg: #0f172a;
+  --card-bg: #172033;
+  --text-primary: #f8fafc;
+  --text-secondary: #aab4c5;
+  --border-color: #2d3a50;
+}
+
+html[data-theme="system"] {
+  --app-bg: #f6f8fb;
+  --card-bg: #ffffff;
+  --text-primary: #172033;
+  --text-secondary: #667085;
+  --border-color: #e1e6ee;
+}
+
+body {
+  background: var(--app-bg);
+  color: var(--text-primary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+.main-layout,
+.main-content {
+  background: var(--app-bg);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.dashboard-stat-card,
+.dashboard-card,
+.reports-stat-card,
+.reports-card,
+.agents-table-card,
+.tickets-table-card,
+.ticket-details-card,
+.settings-card {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.2s ease;
+}
+
+html[data-theme="dark"] .dashboard-stat-card,
+html[data-theme="dark"] .dashboard-card,
+html[data-theme="dark"] .reports-stat-card,
+html[data-theme="dark"] .reports-card,
+html[data-theme="dark"] .agents-table-card,
+html[data-theme="dark"] .tickets-table-card,
+html[data-theme="dark"] .ticket-details-card,
+html[data-theme="dark"] .settings-card {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] strong {
+  color: var(--text-primary);
+}
+
+html[data-theme="dark"] input,
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea {
+  background: var(--input-bg);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+html[data-theme="dark"] p,
+html[data-theme="dark"] label {
+  color: var(--text-secondary);
+}

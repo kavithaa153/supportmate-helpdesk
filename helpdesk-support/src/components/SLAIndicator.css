@@ -1,0 +1,100 @@
+.sla-indicator {
+  width: 150px;
+  min-width: 150px;
+}
+
+.sla-indicator-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 7px;
+}
+
+.sla-indicator-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #667085;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.sla-indicator-header strong {
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.sla-indicator-track {
+  width: 100%;
+  height: 5px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #e8edf3;
+}
+
+.sla-indicator-progress {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.sla-indicator.within
+  .sla-indicator-header strong {
+  color: #287a55;
+}
+
+.sla-indicator.within
+  .sla-indicator-progress {
+  background: #287a55;
+}
+
+.sla-indicator.warning
+  .sla-indicator-header strong {
+  color: #9a6700;
+}
+
+.sla-indicator.warning
+  .sla-indicator-progress {
+  background: #c58a16;
+}
+
+.sla-indicator.breached
+  .sla-indicator-header strong {
+  color: #b42318;
+}
+
+.sla-indicator.breached
+  .sla-indicator-progress {
+  background: #b42318;
+}
+
+.sla-indicator.completed
+  .sla-indicator-header strong {
+  color: #667085;
+}
+
+.sla-indicator.completed
+  .sla-indicator-progress {
+  background: #98a2b3;
+}
+
+.sla-indicator.unknown
+  .sla-indicator-header strong {
+  color: #667085;
+}
+
+.sla-indicator.unknown
+  .sla-indicator-progress {
+  background: #98a2b3;
+}
+
+@media (max-width: 1200px) {
+  .sla-indicator {
+    width: 130px;
+    min-width: 130px;
+  }
+}
